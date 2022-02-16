@@ -55,7 +55,7 @@ async def on_message(message):
     if message.channel.id == 865424335475703808 and message.content != "jwbjvbejwbjvbwjbjkbwkb":
         await message.delete()
 
-    if message.channel.id != 702559343911895041 and (message.content.startswith(".p") or message.content.startswith(".s")):
+    if message.channel.id not in [702559343911895041, 922883779452887050] and (message.content.startswith(".p") or message.content.startswith(".s")):
         guild = client.get_guild(654400102550732804)
         muted = guild.get_role(839826590209015828)
         await message.author.add_roles(muted)
