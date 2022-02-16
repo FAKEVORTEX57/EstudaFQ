@@ -55,11 +55,11 @@ async def on_message(message):
     if message.channel.id == 865424335475703808 and message.content != "jwbjvbejwbjvbwjbjkbwkb":
         await message.delete()
 
-    if message.channel.id not in [702559343911895041, 922883779452887050] and (message.content.startswith(".p") or message.content.startswith(".s")):
+    if message.channel.id not in [922883779452887050, 763803093308538911, 829833542242271253] and (message.content.startswith(".p") or message.content.startswith(".s")):
         guild = client.get_guild(654400102550732804)
         muted = guild.get_role(839826590209015828)
         await message.author.add_roles(muted)
-        await message.channel.send(f"{message.author.mention} como não usaste o canal <#702559343911895041>, foi-te atribuída a role 'muted'. Contudo, podes continuar na chamada e ouvir a música que pedis-te.")
+        await message.channel.send(f"{message.author.mention} como não usaste o canal <#922883779452887050>, foi-te atribuída a role 'muted'. Contudo, podes continuar na chamada e ouvir a música que pedis-te.")
 
 
     if message.channel.id == 702573944687034411 and not "htt" in message.content:
